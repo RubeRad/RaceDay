@@ -1,0 +1,183 @@
+<html>
+
+<head>
+<script type="text/javascript"
+        src="RaceDay.js"></script>
+</head>
+
+
+<body>
+
+<div id="drop_zone">
+<table id="thetable" 
+       border="1" 
+       width="100%">
+<!-- height="100%"> -->
+
+<tr id="right_header"><!--Header row-->
+
+<td id="left_panel"
+    rowspan="6"
+    valign="top"
+    width="50%">
+<table id="left_panel_table">
+<tr>
+<td align="left"><button type="button"
+        onclick="toggleRoster()"
+        title="Rotate between views: standings, schedule, csv">
+        <img src="arrows_circle.png" width="31" height="31"/>
+</button></td>
+<td align="left"><button type="button"
+        onclick="generateHeats(1)"
+        title="Generate heats with each racer once per lane">
+        <img src="oneflag.jpg" width="31" height="31"/>
+</button></td>
+<td><button type="button"
+        onclick="generateHeats(2)"
+        title="Generate heats with each racer twice per lane">
+        <img src="twoflags.jpg" width="31" height="31"/>
+</button></td>
+<td><button type="button"
+        onclick="eraseAll()"
+        title="Erase All Racer and Heat Data">
+        <img src="redx.jpg" width="31" height="31"/>
+</button></td>
+<td><table>
+<tr><td><input id="heatByGroup"
+               type="radio" 
+               name="r1" 
+               value="bygroups" 
+               checked>By Groups</td></tr>
+<tr><td><input id="heatTogether"
+               type="radio" 
+               name="r1" 
+               value="altogether">Altogether</td></tr>
+</table></td>
+<td><a href="README.htm" target="_blank" title="Documentation">
+<img src="q.jpg" width="31" height="31"/></a></td>
+</tr>
+
+<tr>
+<td colspan="5" id="roster"><p>To get started, drag roster csv file onto this page</p></td>
+</tr>
+</table>
+</td>
+
+<td id="header" 
+    colspan="2" 
+    height="40">
+
+<div id="right_panel"><!-- all this can be swapped out -->
+
+<table border="0"><tr height="100%">
+
+<td valign="bottom"><h1 id="currentHeatNumber">HEAT #</h1></td>
+
+
+<td><button 
+  type="button" 
+  onclick="prevHeat()"
+  title="Display Previous Heat">
+  <img src="prev.gif"/>
+</button></td>
+
+<td><button 
+  type="button" 
+  onclick="clearHeat()"
+  title="Clear results of currently-displayed heat">
+  <img src="redx.jpg" height="31" width="31"/>
+</button></td>
+
+<td><button 
+  type="button" 
+  onclick="nextHeat()"
+  title="Display Next Heat">
+  <img src="next.gif"
+</button></td>
+
+<td align="right">On Deck:</td>
+<td><table id="onDeckTable" border="1">
+<tr id="onDeckRow"><!--Only one row-->
+<td id="ondeck0">Lane 1</td>
+<td id="ondeck1">Lane 2</td>
+<td id="ondeck2">Lane 3</td>
+<td id="ondeck3">Lane 4</td>
+</tr>
+</table></td>
+
+<!--
+<td><button 
+  type="button" 
+  onclick="toggleStandings()">
+  <img src="curvedn.jpg" height="50" width="50"/>
+</button></td>
+-->
+
+</tr></table>
+
+</td>
+</tr>
+
+
+<tr id="lane0"
+    onclick="racerIsNext(id)"
+    align="center"
+    height="100">
+<td id="lane0_racer">LANE 1</td>
+<td id="lane0_place">*</td>
+</tr>
+
+<tr id="lane1"
+    onclick="racerIsNext(id)"
+    align="center"
+    height="100">
+<td id="lane1_racer">LANE 2</td>
+<td id="lane1_place">*</td>
+</tr>
+
+<tr id="lane2"
+    onclick="racerIsNext(id)"
+    align="center"
+    height="100">
+<td id="lane2_racer">LANE 3</td>
+<td id="lane2_place">*</td>
+</tr>
+
+<tr id="lane3"
+    onclick="racerIsNext(id)"
+    align="center"
+    height="100">
+<td id="lane3_racer">LANE 4</td>
+<td id="lane3_place">*</td>
+</tr>
+
+<tr id="extra">
+  <td/>
+  <td align="right" valign="bottom">
+    <button type="button"
+	    onclick="togglePointsMode()">
+      <img src="icon-123.gif" height="20"/>
+    </button>
+    <button type="button" 
+	    onclick="toggleDebug()">
+      <img src="bug.png" height="20"/>
+    </button>
+  </td>
+</tr>
+
+</table>
+</div> <!-- end of swappable heat_display -->
+
+</div> <!-- drop_zone -->
+
+
+<script type="text/javascript">
+   initStuff();
+
+</script>
+
+
+</body>
+</html>
+
+
