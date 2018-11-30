@@ -1,1 +1,44 @@
-Documentation TBD
+<h1>RaceDay</h1>
+<p>An app for managing 4-lane/-player racing events</p>
+<p>Start by dragging a roster .csv onto the webpage. See mammals.csv
+as an example of the format. Make sure the By Groups/Altogether radio
+option is selected appropriately (with big enough rosters, racers can
+  be grouped by age or skill and only race within their group)</p>
+<h2>Left Pane</h2>
+<p><img src="oneflag.png" height="31"/> Generate a heat schedule where
+  each racer gets four heats, once in each lane</p>
+<p><img src="twoflags.png" height="31"/> Generate a heat schedule
+  where each racer gets eight heats, twice in each lane</p>
+<p><img src="arrows_circle.png" height="31"/> After a heat schedule
+  has been generated, cycle between three views:</p>
+<ul>
+  <li><b>Schedule:</b> the generated heat schedule is displayed. Each
+  player has a randomly-assigned color to help find their races. Races
+  that have been run and scored are uncolored.</li>
+  <li><b>Score:</b> individual results are listed per player, with
+  their average score in bold.</li>
+  <li><b>CSV:</b> Full state of the roster, schedule, and results; can
+  be copy/pasted into a text file and saved as .csv for reloading
+  later (by dropping onto a refreshed page)</li>
+</ul>
+<p><img src="redx.png" height="31"> click this button to clear all
+race results. Then refresh the page (F5) and drag a new roster csv
+on</p>
+
+
+<h2>Right Pane</h2>
+<p><img src="larrow.jpg" height="31"/><img src="rarrow.jpg"
+height="31"/> Navigate between races in the schedule. "On deck" in the
+upper right show the names of the racers in the next heat in the
+  schedule</p>
+<p><img src="redx.png" height="31"/> Clear results of the
+  currently-displayed race</p>
+<p><img src="one15.png" height="31"/> Toggle between scoring modes:</p>
+<ul>
+  <li><b>Place</b>: Click on the players in the order of
+  finishing. Suitable for pinewood derby</li>
+  <li><b>Points</b>: Click on players in any order and enter the point
+    value of their finish in the popup box. Suitable for MarioKart</li>
+</ul>
+<p><img src="bug.png" height="31"/> Toggle on debugging messages. Will
+  raise lots of popup windows</p>
