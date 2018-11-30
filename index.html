@@ -30,17 +30,17 @@
 <td align="left"><button type="button"
         onclick="generateHeats(1)"
         title="Generate heats with each racer once per lane">
-        <img src="oneflag.jpg" width="31" height="31"/>
+        <img src="oneflag.png" width="31" height="31"/>
 </button></td>
 <td><button type="button"
         onclick="generateHeats(2)"
         title="Generate heats with each racer twice per lane">
-        <img src="twoflags.jpg" width="31" height="31"/>
+        <img src="twoflags.png" width="31" height="31"/>
 </button></td>
 <td><button type="button"
         onclick="eraseAll()"
         title="Erase All Racer and Heat Data">
-        <img src="redx.jpg" width="31" height="31"/>
+        <img src="redx.png" width="31" height="31"/>
 </button></td>
 <td><table>
 <tr><td><input id="heatByGroup"
@@ -53,8 +53,8 @@
                name="r1" 
                value="altogether">Altogether</td></tr>
 </table></td>
-<td><a href="README.htm" target="_blank" title="Documentation">
-<img src="q.jpg" width="31" height="31"/></a></td>
+<td><a href="README.html" target="_blank" title="Documentation">
+<img src="qm.jpg" width="60" height="40"/></a></td>
 </tr>
 
 <tr>
@@ -78,21 +78,21 @@
   type="button" 
   onclick="prevHeat()"
   title="Display Previous Heat">
-  <img src="prev.gif"/>
+  <img src="larrow.jpg" height="31" width="31"/>
 </button></td>
 
 <td><button 
   type="button" 
   onclick="clearHeat()"
   title="Clear results of currently-displayed heat">
-  <img src="redx.jpg" height="31" width="31"/>
+  <img src="redx.png" height="31" width="31"/>
 </button></td>
 
 <td><button 
   type="button" 
   onclick="nextHeat()"
   title="Display Next Heat">
-  <img src="next.gif"
+  <img src="rarrow.jpg" height="31" width="31"/>
 </button></td>
 
 <td align="right">On Deck:</td>
@@ -155,10 +155,12 @@
   <td/>
   <td align="right" valign="bottom">
     <button type="button"
+	    title="Toggle Points Mode"
 	    onclick="togglePointsMode()">
-      <img src="icon-123.gif" height="20"/>
+      <img src="one15.png" height="20"/>
     </button>
-    <button type="button" 
+    <button type="button"
+	    title="Activate debugging messages"
 	    onclick="toggleDebug()">
       <img src="bug.png" height="20"/>
     </button>
