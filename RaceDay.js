@@ -99,7 +99,7 @@ function initStuff() {
    }
    //alert("OK");
 
-   document.getElementById('heatByGroup').checked = 1;
+   document.getElementById('heatTogether').checked = 1;
 
    // Setup the dnd listeners.
    var dropZone = document.getElementById('drop_zone');
